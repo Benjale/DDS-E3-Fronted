@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
+import Home from './components/Home';
+import Category from './components/Category';
+import 'w3-css/w3.css';
 
-function App() {
+const App = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Router>
+      <div className="App">
+        <div className="w3-bar w3-black">
+          <label className="w3-bar-item  w3-mobile">E-COMMERCE PASTAFARI</label>
+          <Link to = "/"  className="w3-bar-item w3-button w3-mobile">Listado de Productos</Link>
+          <Link to="/categorias" className="w3-bar-item w3-button w3-mobile">Categorías</Link>
+        </div>
+        <Routes>
+          <Route exact path="/" element={<Home products={props.products} categorias={props.categorias} />}/>
+          <Route path="/categorias" element={<Category products={props.products} categorias={props.categorias} /> }/>
+        </Routes>
+      </div>
+    </Router>
+    </>
+    
+    
   );
 }
 
