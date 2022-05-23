@@ -17,14 +17,15 @@ const products = [{id:1, name:'Pasta Spaghetti N°5 - 400g', price: 780, brand: 
                     {id:11, name:'Salsa con Trozos de Tomate - 200g', price: 649, brand: 'Talliani', id_category: 2, imagen:'https://images.lider.cl/wmtcl?source=url%5Bfile:/productos/801544a.jpg%5D&viewport=color%5Bwhite%5D,height%5B1000%5D,seed%5B1632941639%5D,vsize%5B1058%5D,width%5B1000%5D,x%5B0%5D,y%5B0%5D&sink' },
                     {id:12, name:'Gnocchi - 500g', price: 2640, brand: 'Trattoria', id_category: 1, imagen: 'https://www.trattoria.cl/assets/img/productos/gnocchi.webp'}
                     ] 
-    const categorias = [{id:1, name:'Pasta'},
-                        {id:2, name:'Salsa de Tomates'}
-                     ] 
+const categorias = [{id:1, name:'Pasta'},
+                    {id:2, name:'Salsa de Tomates'}
+                  ] 
+const cart = []
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App products={products} categorias={categorias} />
+    <App products={products} categorias={categorias} cart={cart} />
   </React.StrictMode>
 );
 

@@ -16,7 +16,7 @@ const App = (props) => {
           <Link to="/categorias" className="w3-bar-item w3-button w3-mobile">Categorías</Link>
         </div>
         <Routes>
-          <Route exact path="/" element={<Home products={props.products} categorias={props.categorias} />}/>
+          <Route exact path="/" element={<Home products={props.products} categorias={props.categorias} cart={props.cart} />}/>
           <Route path="/categorias" element={<Category products={props.products} categorias={props.categorias} /> }/>
         </Routes>
       </div>
