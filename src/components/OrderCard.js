@@ -83,7 +83,7 @@ const OrderCard = ({ order }) => {
 
   return (
     <>
-      <div className="col card shadow rounded " onClick={GoDetail}>
+      <div className="col card shadow rounded" onClick={GoDetail}>
         <div className="m-3">
           <div className="fw-bolder">ECOMMERCE</div>
         </div>

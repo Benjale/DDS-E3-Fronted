@@ -8,7 +8,11 @@ const Orders = () => {
       <div className="container">
         <div className="row row-cols-sm-1 row-cols-1 row-cols-lg-3 row-cols-md-2 pt-4">
           {orders.map((order) => {
-            return <OrderCard order={order} />;
+            return (
+              <div>
+                <OrderCard order={order} />
+              </div>
+            )
           })}
         </div>
       </div>
