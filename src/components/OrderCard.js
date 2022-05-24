@@ -72,7 +72,7 @@ const OrderCard = ({ order }) => {
           <div className="row bg-light">
             <div className="border rounded">
               <div className="text-muted">
-                <p className="h3 my-4">+{order.items.length - 2}</p>
+                <p className="h3 my-4 py-2">+{order.items.length - 2}</p>
               </div>
             </div>
           </div>
